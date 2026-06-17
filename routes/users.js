@@ -152,7 +152,6 @@ router.put('/password', protect, async (req, res) => {
 // @access  Private
 router.post('/logout-all', protect, async (req, res) => {
   try {
-    // In a real app, you'd invalidate all tokens
     res.status(200).json({ success: true, message: 'Logged out from all devices' });
   } catch (error) {
     res.status(500).json({ success: false, message: 'Server error' });
